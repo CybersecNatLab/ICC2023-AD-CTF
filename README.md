@@ -7,7 +7,7 @@ Attack/Defense services for the 2nd International Cybersecurity Challenge @ San 
   <img src="img/icc23.png" width="256" />
   </a>
   <a href="https://cybersecnatlab.it">
-  <img src="img/cybersecnatlab.png" width="256" /> 
+  <img src="img/cybersecnatlab.png" width="512" /> 
   </a>
 </p>
 
