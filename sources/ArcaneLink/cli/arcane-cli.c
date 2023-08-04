@@ -31,12 +31,12 @@
 #define MSG_SZ 0x100
 
 typedef struct __attribute__((packed)) guest_req {
-	uint32_t status; /* [out] */
-	uint32_t cmd;    /* [in]  */
-	uint32_t mid;    /* [in] if CMD == CMD_PUSH_MSG, CMD_PEEK_MSG */
-	uint32_t uid;    /* [in] if CMD == CMD_PEEK_MSG */
-	uint64_t key;    /* [in] if CMD == CMD_PEEK_MSG */
-	char buf[MSG_SZ];
+	uint32_t status;  /* [out] */
+	uint32_t cmd;     /* [in]  */
+	uint32_t mid;     /* [in] if cmd == CMD_PUSH_MSG, CMD_PEEK_MSG */
+	uint32_t uid;     /* [in] if cmd == CMD_PEEK_MSG, CMD_CHK_KEY */
+	uint64_t key;     /* [in] if cmd == CMD_PEEK_MSG, CMD_CHK_KEY; [out] if cmd == CMD_GEN_KEY */
+	char buf[MSG_SZ]; /* [in] if cmd == CMD_PUSH_MSG; [out] if cmd == CMD_PEEK_MSG, CMD_POP_MSG */
 } guest_req_t;
 
 static char *name;

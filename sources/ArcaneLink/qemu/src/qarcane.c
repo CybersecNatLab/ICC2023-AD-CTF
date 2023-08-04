@@ -42,9 +42,9 @@ typedef struct __attribute__((packed)) guest_req {
     uint32_t status;  /* [out] */
     uint32_t cmd;     /* [in]  */
     uint32_t mid;     /* [in] if cmd == CMD_PUSH_MSG, CMD_PEEK_MSG */
-    uint32_t uid;     /* [in] if cmd == CMD_PEEK_MSG */
-    uint64_t key;     /* [in] if cmd == CMD_PEEK_MSG, [out] if cmd == CMD_GEN_KEY */
-    char buf[MSG_SZ]; /* [in] if cmd == CMD_PUSH_MSG, [out] if cmd == CMD_PEEK_MSG, CMD_POP_MSG */
+    uint32_t uid;     /* [in] if cmd == CMD_PEEK_MSG, CMD_CHK_KEY */
+    uint64_t key;     /* [in] if cmd == CMD_PEEK_MSG, CMD_CHK_KEY; [out] if cmd == CMD_GEN_KEY */
+    char buf[MSG_SZ]; /* [in] if cmd == CMD_PUSH_MSG; [out] if cmd == CMD_PEEK_MSG, CMD_POP_MSG */
 } guest_req_t;
 
 /*
@@ -202,7 +202,8 @@ static void *arcane_thread_worker(void* arg) {
             saved_key = atomic_load(&(g_keys[uid - STARTING_UID]));
             ret = memcmp(&saved_key, &key, sizeof(saved_key));
 
-            // [BUG] Leak key with side channel
+            // BUG: Leak of one byte of key by returning the raw memcmp() result
+            // instead of just 0 or 1
             ret = STATUS_OK | ((uint16_t)ret);
             break;
         }
@@ -260,6 +261,7 @@ static void *arcane_thread_worker(void* arg) {
                 break;
             }
 
+            // BUG: double fetch of req->uid after authentication
             qid = get_qid_from_uid(req->uid);
             if (qid == -1) {
                 arcanelog("    [-] invalid uid\n");
@@ -309,11 +311,15 @@ static void arcane_guest_write(void *opaque, hwaddr addr, uint64_t val, unsigned
     if ((pgoff + size) >= sizeof(guest_req_t))
         return;
 
-    // [BUG] uid must not be overwritten when a cmd (CMD_PEEK_MSG) is running
+    // BUG: uid must not be overwritten when a cmd (CMD_PEEK_MSG) is running,
+    // but safeguarding between offsetof(guest_req_t, uid) and
+    // offsetof(guest_req_t, uid) + sizeof_field(guest_req_t, uid) is not
+    // enough. Am 8-write byte at offsetof(guest_req_t, mid) will overwrite both
+    // the mid and uid fields without performing any locking.
     if (pgoff >= offsetof(guest_req_t, uid) &&
             pgoff < (offsetof(guest_req_t, uid) + sizeof_field(guest_req_t, uid))) {
 
-        // thread is running, dont overwrite uid
+        // A request is already pending, don't overwrite uid
         if (qemu_mutex_trylock(&g_mutexes[mutex_idx])) {
             goto out;
         }

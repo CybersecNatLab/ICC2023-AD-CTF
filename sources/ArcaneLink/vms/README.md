@@ -52,7 +52,7 @@ virt-install \
 VM configuration
 ----------------
 
-After crating the VMs as described above, first build the `.deb` packages for
+After creating the VMs as described above, first build the `.deb` packages for
 the other challenge components (see also the README file in each component's
 directory):
 

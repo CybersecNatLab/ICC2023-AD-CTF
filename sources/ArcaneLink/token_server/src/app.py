@@ -43,8 +43,8 @@ def team_id_from_team_or_vulnbox_ip(ip: str) -> Optional[int]:
 @app.get('/')
 async def readme():
 	return JSONResponse({'detail': 'Nothing to see here... use '
-		'/token?target=<target_ip> to get a token to authenticate with the '
-		'service running at <target_ip>'})
+		'/token?target=<target_team_id> to get a token to authenticate with the '
+		'service of a team'})
 
 
 @app.get('/token')
