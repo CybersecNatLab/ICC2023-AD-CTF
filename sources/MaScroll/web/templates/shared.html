@@ -1,0 +1,93 @@
+<html>
+  <?php include 'head.html'; ?>
+  <body>
+    <?php include 'navbar.html'; ?>
+
+    <div class="bg-blue-gradient py-5 pt-3">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <h5 class="text-center metshige">shared with you:</h5>
+
+            <h1 class="text-center metshige"><?php echo $this->document->getFilename(); ?></h1>
+
+            <div
+              class="border-top border-bottom border-secondary-subtle text-center p-2 my-3 px-4"
+            >
+              <button
+                class="btn border border-blue p-1 px-2 my-1 mx-1"
+                data-bs-toggle="modal"
+                data-bs-target="#macroModal"
+                type="button"
+              >
+                <i class="bi bi-eye"></i> View the
+                <span class="text-blue"
+                  >ma<del class="text-secondary">cro</del>gic</span
+                >
+              </button>
+            </div>
+
+            <div class="scrollTextArea w-80 m-auto p-5">
+              <div class="w-100 h-100" id="scrollContent">
+                <!-- -->
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="macroModal"
+              tabindex="-1"
+              aria-labelledby="macroModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h1
+                      class="modal-title fs-5 text-center metshige"
+                      id="macroModalLabel"
+                    >
+                      Macro viewer
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <pre
+                      class="m-0"
+                    ><code class="language-vba"><?php echo $this->document->getMacro(); ?>
+</code></pre>
+                  </div>
+                  <div class="modal-footer text-center">
+                    <button
+                      type="button"
+                      class="m-auto btn border bg-blue text-white playfair"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("scrollContent").innerHTML = marked.parse(
+        "<?php echo $this->document->getFilename(); ?><br/><?php echo $this->document->getBody(); ?>"
+      );
+    </script>
+
+
+
+    <?php include 'footer.html'; ?>
+  </body>
+</html>

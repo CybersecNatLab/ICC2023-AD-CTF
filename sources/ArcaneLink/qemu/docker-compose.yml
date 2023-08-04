@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  build:
+    build: .
+    container_name: qemu_build
+    volumes:
+      - ./src:/src:ro
+      - ./build-deb.sh:/build-deb.sh:ro
+      - ./workdir:/workdir
+    entrypoint: ['/build-deb.sh']

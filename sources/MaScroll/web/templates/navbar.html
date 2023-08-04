@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg p-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <h3 class="metshige m-0">
+        <span class="text-blue">M</span>a<span class="text-blue">S</span>croll
+      </h3>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li>
+          <hr class="dropdown-divider border-blue border border-1 mx-4 h-100" />
+        </li>
+        <li class="nav-item metshige">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+
+        <?php if(!is_null($this->user)){ ?>
+        <li class="nav-item metshige">
+          <a class="nav-link" href="/list">List scrolls</a>
+        </li>
+        <li class="nav-item metshige">
+          <a class="nav-link" href="/write">New scroll</a>
+        </li>
+        <?php } ?>
+      </ul>
+      <form class="d-flex m-0" role="login">
+        <?php if(is_null($this->user)){ ?>
+        <a href="/login" class="btn metshige" type="submit">Sign In</a>
+
+        <a
+          href="/register"
+          class="btn border-blue text-blue metshige"
+          type="submit"
+        >
+          + Sign Up
+        </a>
+
+        <?php } else { ?>
+
+        <a href="#" class="btn metshige" type="submit"
+          ><?php echo $this->user->getUsername(); ?>
+        </a>
+
+        <a
+          href="/logout"
+          class="btn border-blue text-blue metshige"
+          type="submit"
+        >
+          - Log Out
+        </a>
+
+        <?php } ?>
+      </form>
+    </div>
+  </div>
+</nav>

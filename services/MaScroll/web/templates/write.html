@@ -1,0 +1,234 @@
+
+
+<html>
+  <?php include 'head.html'; ?>
+  <body>
+    <?php include 'navbar.html'; ?>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/ace-builds@1.23.4/src-min-noconflict/ace.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/ace-builds@1.23.4/css/ace.min.css
+"
+      rel="stylesheet"
+    />
+    <script>
+      function wrapTextTextarea(
+        textBefore,
+        textAfter,
+        el = document.activeElement
+      ) {
+        const [start, end] = [el.selectionStart, el.selectionEnd];
+        const prevText = el.value.substring(start, end);
+        console.log(start, end, textBefore, textAfter, prevText);
+        el.setRangeText(
+          textBefore + prevText + textAfter,
+          start,
+          end,
+          "select"
+        );
+      }
+    </script>
+    <div class="bg-blue-gradient py-5 pt-3">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <h1 class="text-center metshige">
+              Write your new <span class="text-blue">scroll</span>
+            </h1>
+
+            <form method="POST" class="mt-3 playfair">
+              <div class="text-center">
+                <input
+                  type="text"
+                  name="filename"
+                  class="form-control w-50 m-auto"
+                  placeholder="scrollname.mdx"
+                />
+              </div>
+
+              <div
+                class="border-top border-bottom border-secondary-subtle text-center p-2 my-3 px-4"
+              >
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('**', '**', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-bold"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('__', '__', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-italic"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('# ', '', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-h1"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('## ', '', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-h2"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('### ', '', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-h3"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('~~', '~~', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-type-strikethrough"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('', '- ', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-list-ul"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('', '1. ', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-list-ol"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('', '- [ ] ', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-list-task"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('', '> ', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-quote"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('```\n', '\n```', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-code-slash"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('|  |  |\n|--|--|\n|  |  |', '', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-table"></i>
+                </a>
+                <a
+                  class="btn p-1 mx-1"
+                  href="#"
+                  onclick="wrapTextTextarea('[link description](', ')', document.getElementById('scrollContent'))"
+                >
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+
+                <button
+                  class="btn border border-blue p-1 px-2 mx-1"
+                  data-bs-toggle="modal"
+                  data-bs-target="#macroModal"
+                  type="button"
+                >
+                  <i class="bi bi-magic"></i> Add some
+                  <span class="text-blue"
+                    >ma<del class="text-secondary">cro</del>gic</span
+                  >
+                </button>
+              </div>
+
+              <div class="scrollTextArea w-80 m-auto p-5">
+                <textarea
+                  class="form-control w-100 m-auto h-100"
+                  name="body"
+                  placeholder="body"
+                  id="scrollContent"
+                ></textarea>
+              </div>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="macroModal"
+                tabindex="-1"
+                aria-labelledby="macroModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="macroModalLabel">
+                        Macro editor
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <textarea
+                        class="form-control"
+                        name="macro"
+                        placeholder="Write your macro here"
+                        id="macro"
+                      ></textarea>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn border border-blue text-blue"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button
+                        type="button"
+                        class="btn bg-blue text-white"
+                        data-bs-dismiss="modal"
+                      >
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <input
+                type="submit"
+                name="s"
+                class="form-control border-blue text-blue w-20 m-auto mt-3"
+                value="Save your scroll"
+              />
+
+              <?php include 'errors.html' ?>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <?php include 'footer.html'; ?>
+  </body>
+</html>

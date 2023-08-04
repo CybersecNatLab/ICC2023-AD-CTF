@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		var Module = {
+			onRuntimeInitialized: function () {
+				console.log(Module);
+
+				let name = 'pippo',
+					psw = 'pluto';
+
+				console.time('registrazione');
+				let reg_capsule = Module.register_user(name, psw);
+				console.log(reg_capsule);
+				console.timeEnd('registrazione');
+
+				console.log('REGISTER USER DONE');
+
+				let [cs1, cs] = Module.client_step1(name, psw);
+				console.log('CLIENT 1 DONE');
+				console.log(cs);
+				let [ss1, ss] = Module.server_step1(cs1, reg_capsule);
+				console.log('SERVER 1 DONE');
+				console.log(ss);
+				let cs2 = Module.client_step2(ss1, cs);
+				console.log('CLIENT 2 DONE');
+				let ss2 = Module.server_step2(cs2, ss);
+				console.log('SERVER 2 DONE');
+
+				console.log(ss2);
+			}
+		};
+	</script>
+	<script src="cryptolib.js"></script>
+</html>

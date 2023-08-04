@@ -1,0 +1,4 @@
+fastapi
+uvicorn[standard]
+pyjwt[crypto]
+redis[hiredis]

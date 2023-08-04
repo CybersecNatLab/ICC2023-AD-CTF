@@ -1,0 +1,1948 @@
+{
+    "services": [
+        {
+            "name": "SeaOfHackerz",
+            "shortname": "SeaOfHackerz",
+            "vulnboxId": 0,
+            "attackers": 5,
+            "victims": 5,
+            "firstBlood": {
+                "teamShortname": "latina",
+                "teamName": "Team Latin America",
+                "timestamp": "2023-08-03T16:38:51.493Z"
+            }
+        },
+        {
+            "name": "ArcaneLink",
+            "shortname": "ArcaneLink",
+            "vulnboxId": 1,
+            "attackers": 4,
+            "victims": 8,
+            "firstBlood": {
+                "teamShortname": "asia",
+                "teamName": "Team Asia",
+                "timestamp": "2023-08-03T20:48:51.640Z"
+            }
+        },
+        {
+            "name": "MaScroll - 1",
+            "shortname": "MaScroll-1",
+            "vulnboxId": 2,
+            "attackers": 3,
+            "victims": 7,
+            "firstBlood": {
+                "teamShortname": "asia",
+                "teamName": "Team Asia",
+                "timestamp": "2023-08-03T19:59:31.558Z"
+            }
+        },
+        {
+            "name": "MaScroll - 2",
+            "shortname": "MaScroll-2",
+            "vulnboxId": 2,
+            "attackers": 5,
+            "victims": 6,
+            "firstBlood": {
+                "teamShortname": "europe",
+                "teamName": "Team Europe",
+                "timestamp": "2023-08-03T18:51:37.167Z"
+            }
+        },
+        {
+            "name": "NorthernFiles",
+            "shortname": "NorthernFiles",
+            "vulnboxId": 3,
+            "attackers": 6,
+            "victims": 5,
+            "firstBlood": {
+                "teamShortname": "asia",
+                "teamName": "Team Asia",
+                "timestamp": "2023-08-03T21:40:06.511Z"
+            }
+        },
+        {
+            "name": "UberPendragon",
+            "shortname": "UberPendragon",
+            "vulnboxId": 4,
+            "attackers": 3,
+            "victims": 8,
+            "firstBlood": {
+                "teamShortname": "asia",
+                "teamName": "Team Asia",
+                "timestamp": "2023-08-03T21:28:46.542Z"
+            }
+        }
+    ],
+    "scoreboard": [
+        {
+            "shortname": "asia",
+            "name": "Team Asia",
+            "nop": false,
+            "teamId": 4,
+            "logo": "asia",
+            "score": 52370.948037888564,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 10396.525870100937,
+                    "stolen": 1317,
+                    "lost": 73,
+                    "successfulChecks": 260,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 9214.119141906915,
+                    "stolen": 633,
+                    "lost": 78,
+                    "successfulChecks": 252,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: ce595edb7a5fcf53ef7fa6ce44a2d868\nTimer VM start (arm64 0x7f73c7f3f9d0): 1.740s wall, 17.981ms CPU\nVM arm64 0x7f73c7f3f9d0 assigned uid: 1039\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f73c7f3f9d0 pre-compiled): 4.488s wall, 41.840ms CPU\n\nTimer main: 7.021s wall, 67.618ms CPU"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 87c2907b48e3921b75aeb3e1ce6bdcdd\nTimer VM start (i386 0x7f923ecf1640): 1.998s wall, 24.563ms CPU\nVM i386 0x7f923ecf1640 assigned uid: 1057\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (i386 0x7f923ecf1640): 10.769s wall, 69.997ms CPU\n\nTimer main: 13.668s wall, 117.365ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 4e756a7446b4e428dfe65f91f9bb3c2d\nTimer VM start (i386 0x7f7f2cc82a00): 2.375s wall, 40.314ms CPU\nTimer VM start (arm64 0x7f7f2cc82f70): 2.368s wall, 40.119ms CPU\nTimer VM start (arm64 0x7f7f2cc828b0): 2.360s wall, 39.958ms CPU\nVM i386 0x7f7f2cc82a00 assigned uid: 1099\nVM arm64 0x7f7f2cc82f70 assigned uid: 1099\nVM arm64 0x7f7f2cc828b0 assigned uid: 1011\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 11.532s wall, 119.542ms CPU\n\nTimer main: 14.583s wall, 173.008ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 11633.537158814934,
+                    "stolen": 797,
+                    "lost": 0,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 7969.579862491876,
+                    "stolen": 369,
+                    "lost": 19,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: c989d06ac98599dc20c2cfc1cbaaaa71"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 6380f353c6ecb89a684a2f4d1a3f1eb3"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 10148.773158562051,
+                    "stolen": 615,
+                    "lost": 0,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 11739.939713754318,
+                    "stolen": 851,
+                    "lost": 13,
+                    "successfulChecks": 178,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 372,
+                "weightedScore": 4885.1536284088625,
+                "round": 79
+            },
+            "ad": {
+                "score": 59357.24301184962,
+                "weightedScore": 47485.7944094797
+            }
+        },
+        {
+            "shortname": "europe",
+            "name": "Team Europe",
+            "nop": false,
+            "teamId": 6,
+            "logo": "europe",
+            "score": 51340.88643558082,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 11338.898476541464,
+                    "stolen": 1399,
+                    "lost": 32,
+                    "successfulChecks": 260,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 10075.887108626497,
+                    "stolen": 557,
+                    "lost": 1,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 680ffb90dd56074b219c2d52e47f1272\nTimer VM start (i386 0x7f7b464bd9a0): 2.045s wall, 47.500ms CPU\nTimer VM start (arm64 0x7f7b464bdeb0): 2.036s wall, 47.309ms CPU\nTimer VM start (i386 0x7f7b464bdee0): 2.029s wall, 47.104ms CPU\nVM i386 0x7f7b464bd9a0 assigned uid: 1002\nVM i386 0x7f7b464bdee0 assigned uid: 1028\nVM arm64 0x7f7b464bdeb0 assigned uid: 1002\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_bad_commands(): OK\ncheck_sla_peek_multi_uid(): OK\nTimer CHECK_SLA ops: 4.150s wall, 101.211ms CPU\n\nTimer main: 6.845s wall, 160.484ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: 5b734c22f19a353c05c5c23e628148e5\nTimer VM start (i386 0x7fd1433239a0): 1.903s wall, 18.474ms CPU\nVM i386 0x7fd1433239a0 assigned uid: 1075\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (i386 0x7fd1433239a0): 10.112s wall, 56.530ms CPU\n\nTimer main: 12.433s wall, 83.347ms CPU"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 20b385ecf9b8895a4d31c341c16091a8\nTimer VM start (i386 0x7f75ce3f2670): 1.995s wall, 17.045ms CPU\nVM i386 0x7f75ce3f2670 assigned uid: 1087\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (i386 0x7f75ce3f2670): 10.504s wall, 59.209ms CPU\n\nTimer main: 13.456s wall, 97.205ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 6924.886531576276,
+                    "stolen": 256,
+                    "lost": 62,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 9951.912673357556,
+                    "stolen": 847,
+                    "lost": 69,
+                    "successfulChecks": 268,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 02a8aafd39f22f9f1f4f31d53adb0619"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 836cc09b1fc8122f25ed14b16308c8a8"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 9710.370020707147,
+                    "stolen": 566,
+                    "lost": 8,
+                    "successfulChecks": 176,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 5492.421599474078,
+                    "stolen": 116,
+                    "lost": 138,
+                    "successfulChecks": 178,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 718,
+                "weightedScore": 9428.871788165492,
+                "round": 79
+            },
+            "ad": {
+                "score": 52390.01830926916,
+                "weightedScore": 41912.01464741533
+            }
+        },
+        {
+            "shortname": "oceania",
+            "name": "Team Oceania",
+            "nop": false,
+            "teamId": 8,
+            "logo": "oceania",
+            "score": 48559.97839857266,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 10330.518823081196,
+                    "stolen": 1246,
+                    "lost": 36,
+                    "successfulChecks": 250,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 104,
+                            "stdout": "Cannot register",
+                            "stderr": "connection to server at \"postgres\" (172.21.0.2), port 5432 failed: FATAL:  the database system is not yet accepting connections\nDETAIL:  Consistent recovery state has not been yet reached."
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 104,
+                            "stdout": "Cannot login",
+                            "stderr": "connection to server at \"postgres\" (172.21.0.2), port 5432 failed: FATAL:  the database system is in recovery mode"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 104,
+                            "stdout": "Cannot register",
+                            "stderr": "connection to server at \"postgres\" (172.21.0.2), port 5432 failed: FATAL:  the database system is not yet accepting connections\nDETAIL:  Consistent recovery state has not been yet reached."
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 8794.19403531121,
+                    "stolen": 434,
+                    "lost": 30,
+                    "successfulChecks": 261,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 9cc87ae0e1e800346d747c9afc2f8dee\nTimer VM start (arm64 0x7f635b1926a0): 1.582s wall, 16.766ms CPU\nVM arm64 0x7f635b1926a0 assigned uid: 1038\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f635b1926a0 pre-compiled): 4.081s wall, 40.672ms CPU\n\nTimer main: 6.932s wall, 79.188ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: a7e776e7195bbd10c86dcdc5e631eca7\nTimer VM start (arm64 0x7fd95567a9d0): 1.822s wall, 18.552ms CPU\nVM arm64 0x7fd95567a9d0 assigned uid: 1040\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7fd95567a9d0 pre-compiled): 3.972s wall, 39.580ms CPU\n\nTimer main: 6.174s wall, 65.220ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 24b9da7dae89a450382546bc58907f25\nTimer VM start (i386 0x7f199bea2a00): 2.069s wall, 38.835ms CPU\nTimer VM start (arm64 0x7f199bea2f70): 2.060s wall, 38.586ms CPU\nTimer VM start (i386 0x7f199bea28b0): 2.054s wall, 38.379ms CPU\nVM i386 0x7f199bea2a00 assigned uid: 1031\nVM i386 0x7f199bea28b0 assigned uid: 1026\nVM arm64 0x7f199bea2f70 assigned uid: 1031\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_bad_commands(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_system_resources(): OK\nTimer CHECK_SLA ops: 5.475s wall, 114.204ms CPU\n\nTimer main: 8.166s wall, 166.150ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 6590.341335514628,
+                    "stolen": 158,
+                    "lost": 21,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 8035.890374496087,
+                    "stolen": 375,
+                    "lost": 28,
+                    "successfulChecks": 252,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 86c28179d1f22b8ba1908fd2b21da7e9"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 8cf6b2100f9922e551ae6da43311405a"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 8306.828804416245,
+                    "stolen": 392,
+                    "lost": 6,
+                    "successfulChecks": 163,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 9562.915987866661,
+                    "stolen": 513,
+                    "lost": 17,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 705,
+                "weightedScore": 9258.154053839377,
+                "round": 79
+            },
+            "ad": {
+                "score": 49127.28043091661,
+                "weightedScore": 39301.824344733286
+            }
+        },
+        {
+            "shortname": "usa",
+            "name": "Team USA",
+            "nop": false,
+            "teamId": 9,
+            "logo": "usa",
+            "score": 41016.637108108815,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 10385.012949187023,
+                    "stolen": 1268,
+                    "lost": 59,
+                    "successfulChecks": 264,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 6655.381546334529,
+                    "stolen": 277,
+                    "lost": 102,
+                    "successfulChecks": 259,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: aecc19107af683b3f363b44fd65373ba\nTimer VM start (arm64 0x7f43213159a0): 1.606s wall, 19.190ms CPU\nVM arm64 0x7f43213159a0 assigned uid: 1058\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f43213159a0 pre-compiled): 3.949s wall, 44.425ms CPU\n\nTimer main: 5.969s wall, 71.180ms CPU"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 3d8879a97db97586e6dd605e928b6d5f\nTimer VM start (arm64 0x7f7cb1153670): 1.631s wall, 16.364ms CPU\nVM arm64 0x7f7cb1153670 assigned uid: 1116\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f7cb1153670 pre-compiled): 4.000s wall, 41.410ms CPU\n\nTimer main: 6.777s wall, 75.992ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 78c75cb9eeadb27fc1244a260c289566\nTimer VM start (i386 0x7fbe411d99d0): 2.001s wall, 48.345ms CPU\nTimer VM start (arm64 0x7fbe411d9f40): 1.993s wall, 48.048ms CPU\nTimer VM start (i386 0x7fbe411d9880): 1.987s wall, 47.764ms CPU\nVM i386 0x7fbe411d99d0 assigned uid: 1017\nVM i386 0x7fbe411d9880 assigned uid: 1112\nVM arm64 0x7fbe411d9f40 assigned uid: 1017\ncheck_sla_system_resources(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 6.060s wall, 126.069ms CPU\n\nTimer main: 8.750s wall, 187.178ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 6789.367722565224,
+                    "stolen": 218,
+                    "lost": 48,
+                    "successfulChecks": 269,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 6140.9474841345445,
+                    "stolen": 235,
+                    "lost": 155,
+                    "successfulChecks": 268,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 662316e836e1ce141bed2fe5b2481178"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: c62af2318d37116750cb505e665e0ef0"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 7180.011813629245,
+                    "stolen": 310,
+                    "lost": 67,
+                    "successfulChecks": 175,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3732.7571367987575,
+                    "stolen": 0,
+                    "lost": 140,
+                    "successfulChecks": 177,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 709,
+                "weightedScore": 9310.682587478183,
+                "round": 79
+            },
+            "ad": {
+                "score": 39632.443150788284,
+                "weightedScore": 31705.95452063063
+            }
+        },
+        {
+            "shortname": "canada",
+            "name": "Team Canada",
+            "nop": false,
+            "teamId": 5,
+            "logo": "canada",
+            "score": 35541.16285347064,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 6639.592735377214,
+                    "stolen": 847,
+                    "lost": 290,
+                    "successfulChecks": 249,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 3867.329915013129,
+                    "stolen": 1,
+                    "lost": 111,
+                    "successfulChecks": 243,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 26a83a01a1072f80ac826413017cbd4e\nTimer VM start (arm64 0x7f7cb90166a0): 1.653s wall, 16.138ms CPU\nVM arm64 0x7f7cb90166a0 assigned uid: 1048\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f7cb90166a0 pre-compiled): 4.538s wall, 40.662ms CPU\n\nTimer main: 7.141s wall, 75.771ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: c1a2b160b3bba0c85931dfae42740922\nTimer VM start (i386 0x7fa0f668ca00): 2.424s wall, 40.468ms CPU\nTimer VM start (arm64 0x7fa0f668cf70): 2.416s wall, 40.299ms CPU\nTimer VM start (arm64 0x7fa0f668c8b0): 2.411s wall, 40.064ms CPU\nVM i386 0x7fa0f668ca00 assigned uid: 1015\nVM arm64 0x7fa0f668cf70 assigned uid: 1015\nVM arm64 0x7fa0f668c8b0 assigned uid: 1098\ncheck_sla_bad_commands(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_push_pop(): OK\nTimer CHECK_SLA ops: 5.263s wall, 100.994ms CPU\n\nTimer main: 8.347s wall, 152.969ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: 047ec7831cdacad2de1302db35f2cc04\nTimer VM start (arm64 0x7f795e5669d0): 1.718s wall, 15.654ms CPU\nVM arm64 0x7f795e5669d0 assigned uid: 1055\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (arm64 0x7f795e5669d0): 12.763s wall, 63.334ms CPU\n\nTimer main: 14.922s wall, 85.995ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 4349.969754966901,
+                    "stolen": 0,
+                    "lost": 58,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 7751.437123172897,
+                    "stolen": 342,
+                    "lost": 59,
+                    "successfulChecks": 266,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 5d2bf8abf59a54c4a39f8de575eedc88"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 648f974cefe74aade5bc7308519b440b"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 5042.3142946235575,
+                    "stolen": 98,
+                    "lost": 77,
+                    "successfulChecks": 173,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3254.3254618002256,
+                    "stolen": 0,
+                    "lost": 195,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 904,
+                "weightedScore": 11871.448602369925,
+                "round": 79
+            },
+            "ad": {
+                "score": 29587.142813875886,
+                "weightedScore": 23669.71425110071
+            }
+        },
+        {
+            "shortname": "latina",
+            "name": "Team Latin America",
+            "nop": false,
+            "teamId": 7,
+            "logo": "latina",
+            "score": 18994.49944271683,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 2799.2204608396282,
+                    "stolen": 771,
+                    "lost": 893,
+                    "successfulChecks": 215,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 104,
+                            "stdout": "Checker timeout",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 104,
+                            "stdout": "Checker timeout",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 104,
+                            "stdout": "Cannot register",
+                            "stderr": "Expecting value: line 1 column 1 (char 0)"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 2316.832287366316,
+                    "stolen": 0,
+                    "lost": 312,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: df709d2373a9ed6598accd037ee64b8a\nTimer VM start (arm64 0x7f7e5550c9d0): 1.832s wall, 15.484ms CPU\nVM arm64 0x7f7e5550c9d0 assigned uid: 1097\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f7e5550c9d0 pre-compiled): 4.522s wall, 40.099ms CPU\n\nTimer main: 6.987s wall, 62.601ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 8e9ca4b30d3291198a3a3cf847272429\nTimer VM start (i386 0x7fbec3a33a00): 2.348s wall, 54.911ms CPU\nTimer VM start (arm64 0x7fbec3a33f70): 2.342s wall, 54.675ms CPU\nTimer VM start (i386 0x7fbec3a338b0): 2.336s wall, 54.375ms CPU\nVM i386 0x7fbec3a33a00 assigned uid: 1079\nVM i386 0x7fbec3a338b0 assigned uid: 1052\nVM arm64 0x7fbec3a33f70 assigned uid: 1079\ncheck_sla_system_resources(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 5.423s wall, 98.165ms CPU\n\nTimer main: 8.411s wall, 169.124ms CPU"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 4ab69014c09bf70ee925c047624154ae\nTimer VM start (arm64 0x7f9f1782f6a0): 1.638s wall, 18.778ms CPU\nVM arm64 0x7f9f1782f6a0 assigned uid: 1044\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f9f1782f6a0 pre-compiled): 4.427s wall, 39.556ms CPU\n\nTimer main: 7.173s wall, 80.846ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 4169.482058380815,
+                    "stolen": 0,
+                    "lost": 73,
+                    "successfulChecks": 258,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 4340.031018994745,
+                    "stolen": 0,
+                    "lost": 62,
+                    "successfulChecks": 261,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: d9dab83be0df0f1a508fa506c7d74c6e"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 9385a44af944b208d8365f36cca8492e"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 3240.596832712399,
+                    "stolen": 107,
+                    "lost": 362,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3262.980375212525,
+                    "stolen": 0,
+                    "lost": 194,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 275,
+                "weightedScore": 3611.336687667842,
+                "round": 79
+            },
+            "ad": {
+                "score": 19228.953443811235,
+                "weightedScore": 15383.162755048988
+            }
+        },
+        {
+            "shortname": "africa",
+            "name": "Team Africa",
+            "nop": false,
+            "teamId": 3,
+            "logo": "africa",
+            "score": 12228.011902545872,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 0,
+                    "stolen": 0,
+                    "lost": 1364,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 2344.2039491243536,
+                    "stolen": 0,
+                    "lost": 308,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: ea24f7b6f2eb680b5644f3eb06c1b15e\nTimer VM start (i386 0x7f4e33174670): 2.106s wall, 16.270ms CPU\nVM i386 0x7f4e33174670 assigned uid: 1017\nUploading pre-compiled AES wrapper\nTimer Playground start (i386 0x7f4e33174670 pre-compiled): 3.781s wall, 38.070ms CPU\n\nTimer main: 6.691s wall, 72.161ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 432f321d8b0de57f03c17bb66e6e8d45\nTimer VM start (i386 0x7f51d8aff9d0): 2.219s wall, 43.646ms CPU\nTimer VM start (arm64 0x7f51d8afff40): 2.214s wall, 43.518ms CPU\nTimer VM start (arm64 0x7f51d8aff880): 2.208s wall, 43.265ms CPU\nVM i386 0x7f51d8aff9d0 assigned uid: 1048\nVM arm64 0x7f51d8afff40 assigned uid: 1048\nVM arm64 0x7f51d8aff880 assigned uid: 1088\ncheck_sla_push_pop(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_bad_commands(): OK\ncheck_sla_system_resources(): OK\nTimer CHECK_SLA ops: 4.971s wall, 103.925ms CPU\n\nTimer main: 7.894s wall, 160.938ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: 4a22c4afbe1a0590c194b54888a37421\nTimer VM start (i386 0x7fdfac7f9940): 2.151s wall, 18.670ms CPU\nVM i386 0x7fdfac7f9940 assigned uid: 1056\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (i386 0x7fdfac7f9940): 10.199s wall, 77.083ms CPU\n\nTimer main: 12.734s wall, 104.844ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 2450.714097644028,
+                    "stolen": 0,
+                    "lost": 284,
+                    "successfulChecks": 268,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 1735.5027516254577,
+                    "stolen": 0,
+                    "lost": 396,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: dba08ecd8a6456150b4a709981199b72"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: e7a57f4763e1215bd08a255974cb1965"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 1645.0910366083385,
+                    "stolen": 0,
+                    "lost": 387,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3256.5453222234437,
+                    "stolen": 0,
+                    "lost": 195,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 237,
+                "weightedScore": 3112.315618099195,
+                "round": 79
+            },
+            "ad": {
+                "score": 11394.620355558345,
+                "weightedScore": 9115.696284446676
+            }
+        },
+        {
+            "shortname": "npc2",
+            "name": "Team NPC 2",
+            "nop": false,
+            "teamId": 1,
+            "logo": "cybersecnatlab",
+            "score": 8680.764925562582,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 0,
+                    "stolen": 0,
+                    "lost": 1365,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 2308.112100719781,
+                    "stolen": 0,
+                    "lost": 309,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 8a010a3b3394114fbcf3b13162c90c5f\nTimer VM start (arm64 0x7f9e385b3670): 1.616s wall, 21.451ms CPU\nVM arm64 0x7f9e385b3670 assigned uid: 1106\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f9e385b3670 pre-compiled): 4.447s wall, 43.524ms CPU\n\nTimer main: 7.262s wall, 86.443ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 1fc5aa74c96dac948de80332f1c8a448\nTimer VM start (i386 0x7f6ef04419d0): 2.382s wall, 51.712ms CPU\nTimer VM start (arm64 0x7f6ef0441f40): 2.375s wall, 51.549ms CPU\nTimer VM start (i386 0x7f6ef0441880): 2.369s wall, 51.230ms CPU\nVM i386 0x7f6ef04419d0 assigned uid: 1112\nVM i386 0x7f6ef0441880 assigned uid: 1076\nVM arm64 0x7f6ef0441f40 assigned uid: 1112\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 5.787s wall, 119.134ms CPU\n\nTimer main: 8.820s wall, 183.509ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: dd6150863fb2714ff898f915036d830f\nTimer VM start (i386 0x7f715954e940): 2.206s wall, 16.863ms CPU\nVM i386 0x7f715954e940 assigned uid: 1093\nCompiling AES wrapper inside guest\nWARNING: aes_wrapper/aes_wrap_remote.c contains tabs, replacing them before uploading\nTimer Playground start (i386 0x7f715954e940): 10.335s wall, 69.965ms CPU\n\nTimer main: 12.914s wall, 96.515ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 2360.665026556095,
+                    "stolen": 0,
+                    "lost": 295,
+                    "successfulChecks": 269,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 1358.1733941907323,
+                    "stolen": 0,
+                    "lost": 460,
+                    "successfulChecks": 269,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 2842d1d7a507553db0c675689d21cce8"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: 7d4c182a79cbe7f9b6c878893fb09f8d"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 1604.8058896238535,
+                    "stolen": 0,
+                    "lost": 391,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3232.9732214951605,
+                    "stolen": 0,
+                    "lost": 196,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 0,
+                "weightedScore": 0,
+                "round": 79
+            },
+            "ad": {
+                "score": 10850.956156953227,
+                "weightedScore": 8680.764925562582
+            }
+        },
+        {
+            "shortname": "npc3",
+            "name": "Team NPC 3",
+            "nop": false,
+            "teamId": 2,
+            "logo": "cybersecnatlab",
+            "score": 8605.995849430077,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 0,
+                    "stolen": 0,
+                    "lost": 1364,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 2254.197988858532,
+                    "stolen": 0,
+                    "lost": 320,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: 94334f107f67cf9279d0fa4492a2cc93\nTimer VM start (arm64 0x7f7434d7c9d0): 1.782s wall, 18.270ms CPU\nVM arm64 0x7f7434d7c9d0 assigned uid: 1056\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7f7434d7c9d0 pre-compiled): 4.502s wall, 40.015ms CPU\n\nTimer main: 6.649s wall, 65.338ms CPU"
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: a831428a7919bba2e92a7e119086c04b\nTimer VM start (arm64 0x7efd0702c6a0): 2.414s wall, 15.955ms CPU\nVM arm64 0x7efd0702c6a0 assigned uid: 1021\nUploading pre-compiled AES wrapper\nTimer Playground start (arm64 0x7efd0702c6a0 pre-compiled): 4.303s wall, 40.623ms CPU\n\nTimer main: 7.817s wall, 75.064ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: 6f46893c9ae325bbfd85830fa1da744f\nTimer VM start (i386 0x7fb8c5719a00): 2.225s wall, 41.629ms CPU\nTimer VM start (arm64 0x7fb8c5719f70): 2.218s wall, 41.379ms CPU\nTimer VM start (arm64 0x7fb8c57198b0): 2.212s wall, 41.096ms CPU\nVM i386 0x7fb8c5719a00 assigned uid: 1111\nVM arm64 0x7fb8c5719f70 assigned uid: 1111\nVM arm64 0x7fb8c57198b0 assigned uid: 1124\ncheck_sla_chkkey(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 5.260s wall, 92.468ms CPU\n\nTimer main: 8.171s wall, 147.495ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 2330.078543565154,
+                    "stolen": 0,
+                    "lost": 299,
+                    "successfulChecks": 268,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 1364.674892593544,
+                    "stolen": 0,
+                    "lost": 459,
+                    "successfulChecks": 267,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: debf9329e2448e395a3d90fe5fc23275"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 440e0b6c635fc1fc747a4fa2a9693e79"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 1608.4082721040106,
+                    "stolen": 0,
+                    "lost": 391,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3232.558010091951,
+                    "stolen": 0,
+                    "lost": 196,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 0,
+                "weightedScore": 0,
+                "round": 79
+            },
+            "ad": {
+                "score": 10757.494811787596,
+                "weightedScore": 8605.995849430077
+            }
+        },
+        {
+            "shortname": "npc1",
+            "name": "Team NPC 1",
+            "nop": false,
+            "teamId": 0,
+            "logo": "cybersecnatlab",
+            "score": 8534.346536314608,
+            "services": [
+                {
+                    "shortname": "SeaOfHackerz",
+                    "score": 0,
+                    "stolen": 0,
+                    "lost": 1372,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "ArcaneLink",
+                    "score": 2169.7419267387627,
+                    "stolen": 0,
+                    "lost": 331,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "PUT_FLAG RNG seed: 03a63ccf7ed90922c3e7c0a5289dc332\nTimer VM start (i386 0x7f6ca8857670): 2.172s wall, 18.061ms CPU\nVM i386 0x7f6ca8857670 assigned uid: 1026\nUploading pre-compiled AES wrapper\nTimer Playground start (i386 0x7f6ca8857670 pre-compiled): 3.375s wall, 37.617ms CPU\n\nTimer main: 6.608s wall, 74.700ms CPU"
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "GET_FLAG RNG seed: f49cec10b50fcef5869daf9df76661cb\nTimer VM start (i386 0x7fd34ddb29a0): 2.303s wall, 18.490ms CPU\nVM i386 0x7fd34ddb29a0 assigned uid: 1107\nUploading pre-compiled AES wrapper\nTimer Playground start (i386 0x7fd34ddb29a0 pre-compiled): 3.761s wall, 40.632ms CPU\n\nTimer main: 6.484s wall, 65.135ms CPU"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "CHECK_SLA RNG seed: f31177b00129cb0cc7a2169d7981c46a\nTimer VM start (i386 0x7f358eb9a9d0): 2.336s wall, 42.460ms CPU\nTimer VM start (arm64 0x7f358eb9af40): 2.330s wall, 42.273ms CPU\nTimer VM start (i386 0x7f358eb9a880): 2.325s wall, 41.976ms CPU\nVM i386 0x7f358eb9a9d0 assigned uid: 1114\nVM i386 0x7f358eb9a880 assigned uid: 1079\nVM arm64 0x7f358eb9af40 assigned uid: 1114\ncheck_sla_peek_multi_uid(): OK\ncheck_sla_push_peek_pop_single_vm(): OK\ncheck_sla_push_pop(): OK\ncheck_sla_push_peek_pop_multi_vm(): OK\ncheck_sla_system_resources(): OK\ncheck_sla_chkkey(): OK\ncheck_sla_bad_commands(): OK\nTimer CHECK_SLA ops: 5.283s wall, 98.685ms CPU\n\nTimer main: 8.300s wall, 155.362ms CPU"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-1",
+                    "score": 2400.957770415968,
+                    "stolen": 0,
+                    "lost": 289,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "MaScroll-2",
+                    "score": 1351.850424942533,
+                    "stolen": 0,
+                    "lost": 461,
+                    "successfulChecks": 270,
+                    "totalChecks": 270,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "Get flag seed: e7dfa054b38146ce4804dbd7da67d47e"
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": "SLA check seed: 1ed802d3d631fb4fddba36bc2bea9a73"
+                        }
+                    ]
+                },
+                {
+                    "shortname": "NorthernFiles",
+                    "score": 1512.7998770131308,
+                    "stolen": 0,
+                    "lost": 399,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                },
+                {
+                    "shortname": "UberPendragon",
+                    "score": 3232.5831712828663,
+                    "stolen": 0,
+                    "lost": 196,
+                    "successfulChecks": 181,
+                    "totalChecks": 181,
+                    "checks": [
+                        {
+                            "action": "GET_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "PUT_FLAG",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        },
+                        {
+                            "action": "CHECK_SLA",
+                            "exitCode": 101,
+                            "stdout": "OK",
+                            "stderr": ""
+                        }
+                    ]
+                }
+            ],
+            "koth": {
+                "score": 0,
+                "weightedScore": 0,
+                "round": 79
+            },
+            "ad": {
+                "score": 10667.93317039326,
+                "weightedScore": 8534.346536314608
+            }
+        }
+    ]
+}

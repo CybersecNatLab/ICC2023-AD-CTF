@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+redis = "*"
+fastapi = "*"
+fastapi-utils = "*"
+requests = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+pyjwt = {extras = ["crypto"], version = "*"}
+passlib = "*"

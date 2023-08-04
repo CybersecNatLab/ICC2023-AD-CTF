@@ -1,0 +1,7 @@
+requests
+redis
+passlib
+fastapi
+fastapi-utils
+uvicorn[standard]
+pyjwt[crypto]

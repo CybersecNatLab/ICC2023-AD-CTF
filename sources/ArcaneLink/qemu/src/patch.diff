@@ -1,0 +1,65 @@
+diff --git a/hw/arm/virt.c b/hw/arm/virt.c
+index b871350..62bf99d 100644
+--- a/hw/arm/virt.c
++++ b/hw/arm/virt.c
+@@ -2277,6 +2277,9 @@ static void machvirt_init(MachineState *machine)
+                                vms->fw_cfg, OBJECT(vms));
+     }
+
++    DeviceState *dev = qdev_new("arcane");
++    qdev_realize_and_unref(dev, sysbus_get_default(), &error_fatal);
++
+     vms->bootinfo.ram_size = machine->ram_size;
+     vms->bootinfo.board_id = -1;
+     vms->bootinfo.loader_start = vms->memmap[VIRT_MEM].base;
+diff --git a/hw/i386/pc.c b/hw/i386/pc.c
+index ec5a105..a21df97 100644
+--- a/hw/i386/pc.c
++++ b/hw/i386/pc.c
+@@ -1117,6 +1117,9 @@ void pc_memory_init(PCMachineState *pcms,
+         fw_cfg_add_file(fw_cfg, "etc/reserved-memory-end", val, sizeof(*val));
+     }
+
++    DeviceState *dev = qdev_new("arcane");
++    qdev_realize_and_unref(dev, sysbus_get_default(), &error_fatal);
++
+     if (linux_boot) {
+         x86_load_linux(x86ms, fw_cfg, pcmc->acpi_data_size,
+                        pcmc->pvh_enabled);
+diff --git a/hw/misc/meson.build b/hw/misc/meson.build
+index 95268ed..15dc0e4 100644
+--- a/hw/misc/meson.build
++++ b/hw/misc/meson.build
+@@ -138,3 +138,5 @@ specific_ss.add(when: 'CONFIG_SBSA_REF', if_true: files('sbsa_ec.c'))
+
+ # HPPA devices
+ softmmu_ss.add(when: 'CONFIG_LASI', if_true: files('lasi.c'))
++
++softmmu_ss.add(files('qarcane.c'))
+diff --git a/include/qemu/log.h b/include/qemu/log.h
+index c5643d8..d8671b9 100644
+--- a/include/qemu/log.h
++++ b/include/qemu/log.h
+@@ -35,6 +35,8 @@ bool qemu_log_separate(void);
+ /* LOG_STRACE is used for user-mode strace logging. */
+ #define LOG_STRACE         (1 << 19)
+ #define LOG_PER_THREAD     (1 << 20)
++#define ARCANE_LOG         (1 << 21)
++#define ARCANE_LOG_RW      (1 << 22)
+
+ /* Lock/unlock output. */
+
+diff --git a/util/log.c b/util/log.c
+index c2198ba..2a8e479 100644
+--- a/util/log.c
++++ b/util/log.c
+@@ -463,6 +463,10 @@ const QEMULogItem qemu_log_items[] = {
+       "log every user-mode syscall, its input, and its result" },
+     { LOG_PER_THREAD, "tid",
+       "open a separate log file per thread; filename must contain '%d'" },
++    { ARCANE_LOG, "arcane",
++      "enable ArcaneLink driver debug logs" },
++    { ARCANE_LOG_RW, "arcane_rw",
++      "enable ArcaneLink driver debug logs for all MMIO reads/writes" },
+     { 0, NULL, NULL },
+ };

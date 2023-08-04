@@ -1,0 +1,52 @@
+<html>
+  <?php include 'head.html'; ?>
+  <body>
+    <?php include 'navbar.html'; ?>
+
+    <div class="container py-5">
+      <div class="row justify-content-center py-5">
+        <div class="col-8 text-center">
+          <h1 class="metshige">
+            <span class="text-blue">easy</span> and
+            <span class="text-blue">secure</span> access
+          </h1>
+          <h5 class="playfair text-body-tertiary">
+            work collaboratively on shareable scrolls from your inventory
+          </h5>
+        </div>
+
+        <div class="row justify-content-center py-5">
+          <div
+            class="col-12 col-md-6 col-lg-3 text-center border border-3 rounded-3 border-blue p-3"
+          >
+            <h5 class="metshige text-center text-blue">Registration</h5>
+
+            <form method="POST" class="m-0">
+              <input
+                class="form-control mt-4 rounded-3 border border-body-tertiary text-body-tertiary playfair"
+                type="text"
+                name="username"
+                placeholder="enter your username"
+              />
+              <input
+                class="form-control mt-4 rounded-3 border border-body-tertiary text-body-tertiary playfair"
+                type="password"
+                name="password"
+                placeholder="enter your password"
+              />
+              <input
+                class="form-control mt-4 rounded-3 border border-body-tertiary bg-blue text-white metshige"
+                type="submit"
+                name="login"
+                value="Register now"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php include 'errors.html' ?>
+
+    <?php include 'footer.html'; ?>
+  </body>
+</html>

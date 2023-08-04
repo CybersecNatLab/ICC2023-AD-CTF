@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  backend:
+    build: .
+    container_name: arcanelink_backend
+    restart: unless-stopped
+    command: 'uvicorn arcanelink.backend:app --host 0.0.0.0 --port 1338 --log-level warning'
+    ipc: host
+    expose:
+      - '1338'
+    environment:
+      # Uncomment this to reset the service and wipe DB on start
+      #- 'RESET_SERVICE=1'
+      - 'TEAM_ID=255'
+      - 'LIBVIRT_DEFAULT_URI=qemu+unix:///system?socket=/chall/libvirt-sock'
+    volumes:
+      - './arcanelink:/chall/arcanelink:ro'
+      - '/run/libvirt/libvirt-sock:/chall/libvirt-sock:ro'
+
+  server:
+    build: .
+    container_name: arcanelink_server
+    restart: unless-stopped
+    command: 'socat -lf/dev/null TCP-LISTEN:1337,reuseaddr,fork EXEC:"python -m arcanelink.server"'
+    ports:
+      - '1337:1337'
+    environment:
+      - 'BACKEND_HOST=arcanelink_backend'
+      - 'BACKEND_PORT=1338'
+      - 'LIBVIRT_DEFAULT_URI=qemu+unix:///system?socket=/chall/libvirt-sock'
+    volumes:
+      - './arcanelink:/chall/arcanelink:ro'
+      - '/run/libvirt/libvirt-sock:/chall/libvirt-sock:ro'
+
+  redis:
+      image: redis:7-alpine
+      container_name: arcanelink_db
+      restart: unless-stopped
+      command: redis-server --save 30 1 --loglevel warning
+      volumes:
+        - redis_data:/data
+
+volumes:
+  redis_data:
+    driver: local

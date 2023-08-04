@@ -1,0 +1,8 @@
+{
+	"command": "node ./dist/checker.js",
+	"timeout": {
+		"CHECK_SLA": 12000,
+		"PUT_FLAG": 12000,
+		"GET_FLAG": 12000
+	}
+}

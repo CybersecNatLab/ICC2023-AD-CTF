@@ -1,0 +1,26 @@
+{
+	"name": "cli",
+	"version": "1.0.0",
+	"description": "",
+	"main": "checker.js",
+	"scripts": {
+		"build": "sed -i \"s/from 'openapi-fetch'/from 'openapi-fetch\\/dist\\/index.js'/g\" _api/index.ts && tsc && sed -i s/index\\\\.js/index.cjs/g dist/_api/index.js",
+		"start": "node ./dist/checker.js"
+	},
+	"author": "",
+	"types": "./checker.d.ts",
+	"dependencies": {
+		"mime": "^3.0.0",
+		"openapi-fetch": "^0.6.1",
+		"seedrandom": "^3.0.5",
+		"yargs": "^17.7.2"
+	},
+	"devDependencies": {
+		"@types/mime": "^3.0.1",
+		"@types/node": "^20.3.1",
+		"@types/seedrandom": "^3.0.5",
+		"@types/yargs": "^17.0.24",
+		"openapi-typescript": "^6.3.7",
+		"typescript": "^5.1.6"
+	}
+}

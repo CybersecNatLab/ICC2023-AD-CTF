@@ -1,0 +1,92 @@
+{
+    "start": "2023-08-03T16:10:00.000Z",
+    "end": "2023-08-04T01:10:00.000Z",
+    "roundTime": 120,
+    "rounds": 270,
+    "freezeRound": 210,
+    "currentRound": 270,
+    "teams": [
+        {
+            "id": 0,
+            "name": "Team NPC 1",
+            "shortname": "npc1"
+        },
+        {
+            "id": 1,
+            "name": "Team NPC 2",
+            "shortname": "npc2"
+        },
+        {
+            "id": 2,
+            "name": "Team NPC 3",
+            "shortname": "npc3"
+        },
+        {
+            "id": 3,
+            "name": "Team Africa",
+            "shortname": "africa"
+        },
+        {
+            "id": 4,
+            "name": "Team Asia",
+            "shortname": "asia"
+        },
+        {
+            "id": 5,
+            "name": "Team Canada",
+            "shortname": "canada"
+        },
+        {
+            "id": 6,
+            "name": "Team Europe",
+            "shortname": "europe"
+        },
+        {
+            "id": 7,
+            "name": "Team Latin America",
+            "shortname": "latina"
+        },
+        {
+            "id": 8,
+            "name": "Team Oceania",
+            "shortname": "oceania"
+        },
+        {
+            "id": 9,
+            "name": "Team USA",
+            "shortname": "usa"
+        }
+    ],
+    "services": [
+        {
+            "name": "SeaOfHackerz",
+            "shortname": "SeaOfHackerz",
+            "vulnboxId": 0
+        },
+        {
+            "name": "ArcaneLink",
+            "shortname": "ArcaneLink",
+            "vulnboxId": 1
+        },
+        {
+            "name": "MaScroll - 1",
+            "shortname": "MaScroll-1",
+            "vulnboxId": 2
+        },
+        {
+            "name": "MaScroll - 2",
+            "shortname": "MaScroll-2",
+            "vulnboxId": 2
+        },
+        {
+            "name": "NorthernFiles",
+            "shortname": "NorthernFiles",
+            "vulnboxId": 3
+        },
+        {
+            "name": "UberPendragon",
+            "shortname": "UberPendragon",
+            "vulnboxId": 4
+        }
+    ]
+}

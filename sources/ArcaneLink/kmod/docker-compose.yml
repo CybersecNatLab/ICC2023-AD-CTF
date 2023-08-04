@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  build:
+    build: .
+    container_name: kmod_build
+    volumes:
+      - ./src/karcane.c:/src/karcane.c:ro
+      - ./src/Makefile:/src/Makefile:ro
+      - ./build-debs.sh:/build-debs.sh:ro
+      - ./workdir:/workdir
+    entrypoint: ['/build-debs.sh']

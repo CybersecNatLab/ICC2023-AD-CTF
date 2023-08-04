@@ -1,0 +1,15 @@
+<?php
+if(Flash::is_flashing()){?>
+<div>
+    <span color="red">
+        <ul>
+        <?php 
+        foreach(Flash::get_flashed_messages() as $msg){
+            echo '<li>' . $msg . '</li>';
+        }
+        ?>
+    </ul>
+    </span>
+</div>
+<?php
+}

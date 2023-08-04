@@ -1,0 +1,5 @@
+# pipenv install -r requirements.txt
+pwntools
+redis
+requests==2.31.0
+cryptography
