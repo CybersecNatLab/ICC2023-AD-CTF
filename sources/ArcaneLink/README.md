@@ -253,5 +253,5 @@ for more information.
 
 | Store | Exploit                                                                                                                                      |
 | :---: | :------------------------------------------------------------------------------------------------------------------------------------------- |
-|   1   | [exploit_leak_key.c](../../exploits/ArcaneLink/exploit_leak_keyc), [exploit_leak_key.py](../../exploits/ArcaneLink/exploit_leak_key.py)      |
+|   1   | [exploit_leak_key.c](../../exploits/ArcaneLink/exploit_leak_key.c), [exploit_leak_key.py](../../exploits/ArcaneLink/exploit_leak_key.py)      |
 |   2   | [exploit_race_cond.c](../../exploits/ArcaneLink/exploit_race_cond.c), [exploit_race_cond.py](../../exploits/ArcaneLink/exploit_race_cond.py) |
